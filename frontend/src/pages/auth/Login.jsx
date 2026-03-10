@@ -24,9 +24,9 @@ export default function Login() {
 
                     {/* Logo */}
                     <img
-                        src="/new.png"
+                        src="/logo.png"
                         alt="Gitakshmi Technologies"
-                        className="w-56 mb-1 object-contain"
+                        className="w-28 mb-8 object-contain"
                     />
 
                     {/* Company Name */}
