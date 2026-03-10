@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { AppRouter } from './pages/router/AppRouter'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
@@ -9,7 +10,7 @@ function App() {
   return (
 
     <>
-    <h1>Gitakshmi's Project Management System</h1>
+      <AppRouter />
     </>
   )
 }
