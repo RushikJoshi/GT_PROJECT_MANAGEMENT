@@ -419,13 +419,13 @@ export default function App() {
           {/* Stat cards */}
           <div style={{ display: "grid", gridTemplateColumns: "repeat(4,1fr)", gap: 16, marginBottom: 20 }}>
             {[
-              { label: "Total Profit", val: "₹8,215", pct: "4.65%", accent: "#4285f4", bg: "#e8f0fe", bar: "30%",
-                icon: <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-indian-rupee-icon lucide-indian-rupee"><path d="M6 3h12"/><path d="M6 8h12"/><path d="m6 13 8.5 8"/><path d="M6 13h3"/><path d="M9 13c6.667 0 6.667-10 0-10"/></svg>                },
-              { label: "Average Income", val: "₹10,215", pct: "2.65%", accent: "#34a853", bg: "#e6f4ea", bar: "55%",
+              { label: "Total Projects", val: "80", pct: "4.65%", accent: "#4285f4", bg: "#e8f0fe", bar: "30%",
+                icon: <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-folder-kanban-icon lucide-folder-kanban"><path d="M4 20h16a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2h-7.93a2 2 0 0 1-1.66-.9l-.82-1.2A2 2 0 0 0 7.93 3H4a2 2 0 0 0-2 2v13c0 1.1.9 2 2 2Z"/><path d="M8 10v4"/><path d="M12 10v2"/><path d="M16 10v6"/></svg>},
+              { label: "Total Tasks", val: "1042", pct: "2.65%", accent: "#34a853", bg: "#e6f4ea", bar: "55%",
                 icon: <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#34a853" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><path d="M2 20h20M6 20V10M12 20V4M18 20v-6"/></svg> },
-              { label: "Total Revenue", val: "38.90%", pct: "7.65%", accent: "#ea4335", bg: "#fce8e6", bar: "70%",
-                icon: <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#ea4335" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg> },
-              { label: "Total Deals", val: "6,215", pct: "6.65%", accent: "#00bcd4", bg: "#e0f7fa", bar: "85%",
+              { label: "Total Employees", val: "90", pct: "7.65%", accent: "#35eaa5", bg: "#fce8e6", bar: "70%",
+                icon: <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-user-icon lucide-user"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>},
+              { label: "Projects Completed", val: "62", pct: "6.65%", accent: "#00bcd4", bg: "#e0f7fa", bar: "85%",
                 icon: <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#00bcd4" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v16"/></svg> },
             ].map((c, i) => (
               <div key={c.label} className="card-up" style={{ animationDelay: `${i * 70}ms`, background: "#fff", borderRadius: 12, padding: "18px", boxShadow: "0 2px 12px rgba(0,0,0,0.06)", border: "1px solid #f0f2f8" }}>
@@ -478,9 +478,9 @@ export default function App() {
               {/* Summary rows */}
               <div style={{ borderTop: "1px solid #f0f2f8", paddingTop: 13, display: "flex", flexDirection: "column", gap: 7 }}>
                 {[
-                  { dot: "#4285f4", label: "All Revenue", val: "₹795.69k", pct: "5.29%", up: true },
-                  { dot: "#cfd8e3", label: "All Expenses", val: "₹415.37k", pct: "4.52%", up: true },
-                  { dot: "#1a1a2e", label: "Profit", val: "3.6%", pct: "2.69%", up: false },
+                  { dot: "#4285f4", label: "Projects", val: "68", pct: "5.29%", up: true },
+                  { dot: "#cfd8e3", label: "Tasks", val: "37", pct: "4.52%", up: true },
+                  { dot: "#1a1a2e", label: "Employees", val: "36", pct: "2.69%", up: true },
                 ].map(r => (
                   <div key={r.label} style={{ display: "flex", alignItems: "center", gap: 10 }}>
                     <div style={{ width: 10, height: 10, borderRadius: 2, background: r.dot, flexShrink: 0 }} />
@@ -506,9 +506,9 @@ export default function App() {
                   <PolarGrid stroke="#eef0f4" />
                   <PolarAngleAxis dataKey="s" tick={{ fontSize: 11, fill: "#b0bec5" }} />
                   <PolarRadiusAxis tick={{ fontSize: 9, fill: "#b0bec5" }} />
-                  <Radar name="Read" dataKey="R" stroke="#4285f4" fill="#4285f4" fillOpacity={0.15} strokeWidth={2} />
-                  <Radar name="Delivery" dataKey="D" stroke="#1a1a2e" fill="#1a1a2e" fillOpacity={0.1} strokeWidth={2} />
-                  <Radar name="Failed" dataKey="F" stroke="#ea4335" fill="#ea4335" fillOpacity={0.13} strokeWidth={2} />
+                  <Radar name="In Progress" dataKey="R" stroke="#4285f4" fill="#4285f4" fillOpacity={0.15} strokeWidth={2} />
+                  <Radar name="Completed" dataKey="D" stroke="#1a1a2e" fill="#1a1a2e" fillOpacity={0.1} strokeWidth={2} />
+                  <Radar name="To Do" dataKey="F" stroke="#eead20" fill="#ea4335" fillOpacity={0.13} strokeWidth={2} />
                   <Legend iconSize={8} wrapperStyle={{ fontSize: 11, color: "#5a6a8a" }} />
                   <Tooltip contentStyle={{ fontSize: 11, borderRadius: 8, border: "1px solid #eef0f4" }} />
                 </RadarChart>
