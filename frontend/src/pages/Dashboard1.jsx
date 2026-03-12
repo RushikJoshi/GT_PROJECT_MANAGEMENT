@@ -98,8 +98,8 @@ const notifications = [
 ];
 
 const avatarColors = [
-  "bg-blue-500","bg-purple-500","bg-green-500","bg-orange-500",
-  "bg-pink-500","bg-cyan-500","bg-red-500","bg-indigo-500",
+  "bg-blue-500", "bg-purple-500", "bg-green-500", "bg-orange-500",
+  "bg-pink-500", "bg-cyan-500", "bg-red-500", "bg-indigo-500",
 ];
 
 // ─── Subcomponents ────────────────────────────────────────────────────────────
@@ -616,7 +616,7 @@ export default function NovoDashboard() {
                   <div key={i} className={`flex items-start gap-3 p-3 rounded-xl border transition-all duration-200 cursor-pointer hover:shadow-sm ${taskDone[i] ? "border-gray-100 bg-gray-50/50" : "border-blue-100 bg-blue-50/30"}`}
                     onClick={() => { const copy = [...taskDone]; copy[i] = !copy[i]; setTaskDone(copy); }}>
                     <div className={`w-5 h-5 rounded-md border-2 flex items-center justify-center flex-shrink-0 mt-0.5 transition-all duration-200 ${taskDone[i] ? "bg-emerald-500 border-emerald-500" : "border-gray-300 bg-white"}`}>
-                      {taskDone[i] && <svg width="10" height="8" viewBox="0 0 10 8" fill="none"><path d="M1 4l3 3 5-6" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/></svg>}
+                      {taskDone[i] && <svg width="10" height="8" viewBox="0 0 10 8" fill="none"><path d="M1 4l3 3 5-6" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" /></svg>}
                     </div>
                     <div className="flex-1 min-w-0">
                       <p className={`text-xs font-bold ${taskDone[i] ? "line-through text-gray-400" : "text-gray-800"}`}>{task.title}</p>

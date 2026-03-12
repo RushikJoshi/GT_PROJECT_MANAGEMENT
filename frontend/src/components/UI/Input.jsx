@@ -3,12 +3,12 @@ import React, { forwardRef } from 'react';
 /**
  * Production-ready Input component with built-in label and error handling
  */
-const Input = forwardRef(({ 
-  label, 
-  error, 
-  type = 'text', 
-  className = '', 
-  ...props 
+const Input = forwardRef(({
+  label,
+  error,
+  type = 'text',
+  className = '',
+  ...props
 }, ref) => {
   return (
     <div className="flex flex-col gap-1 w-full">
