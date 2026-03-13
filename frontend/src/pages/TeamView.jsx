@@ -36,9 +36,9 @@ const TeamView = () => {
              <div className="w-8 h-8 bg-blue-50 text-blue-600 rounded-lg flex items-center justify-center">
                 <Users size={20} />
              </div>
-             <h1 className="text-[18px] font-bold text-gray-800">{teamName} Team</h1>
+             <h1 className="text-[18px] font-semibold text-gray-800">{teamName} Team</h1>
           </div>
-          <button className="bg-[#0095FF] text-white px-5 py-2 rounded-full text-xs font-bold hover:bg-blue-600 transition-all flex items-center gap-2 shadow-lg shadow-blue-500/10">
+          <button className="bg-[#0095FF] text-white px-5 py-2 rounded-full text-xs font-semibold hover:bg-blue-600 transition-all flex items-center gap-2 shadow-lg shadow-blue-500/10">
             <Plus size={16} strokeWidth={3} />
             <span>Invite</span>
           </button>
@@ -68,8 +68,8 @@ const TeamView = () => {
                { label: 'Completion', value: '88%', color: 'text-rose-500' },
              ].map((stat, i) => (
                <div key={i} className="p-6 rounded-[20px] bg-gray-50/50 border border-gray-100/50">
-                  <div className="text-[11px] font-bold text-gray-400 uppercase tracking-widest mb-1">{stat.label}</div>
-                  <div className={`text-2xl font-black ${stat.color}`}>{stat.value}</div>
+                  <div className="text-[11px] font-semibold text-gray-400 uppercase tracking-widest mb-1">{stat.label}</div>
+                  <div className={`text-2xl font-semibold ${stat.color}`}>{stat.value}</div>
                </div>
              ))}
           </div>
@@ -78,7 +78,7 @@ const TeamView = () => {
              {/* MEMBER LIST: Clean Table */}
              <div className="col-span-8 space-y-4">
                 <div className="flex items-center justify-between mb-2">
-                   <h2 className="text-[16px] font-bold text-gray-800">Team Members</h2>
+                   <h2 className="text-[16px] font-semibold text-gray-800">Team Members</h2>
                    <span className="text-xs font-medium text-gray-400">{members.length} members total</span>
                 </div>
                 
@@ -86,9 +86,9 @@ const TeamView = () => {
                    <table className="w-full text-left">
                       <thead>
                          <tr className="bg-gray-50/50 border-b border-gray-100">
-                            <th className="px-6 py-4 text-[11px] font-bold text-gray-400 uppercase tracking-wider">Member</th>
-                            <th className="px-6 py-4 text-[11px] font-bold text-gray-400 uppercase tracking-wider">Role</th>
-                            <th className="px-6 py-4 text-[11px] font-bold text-gray-400 uppercase tracking-wider">Status</th>
+                            <th className="px-6 py-4 text-[11px] font-semibold text-gray-400 uppercase tracking-wider">Member</th>
+                            <th className="px-6 py-4 text-[11px] font-semibold text-gray-400 uppercase tracking-wider">Role</th>
+                            <th className="px-6 py-4 text-[11px] font-semibold text-gray-400 uppercase tracking-wider">Status</th>
                             <th className="px-6 py-4"></th>
                          </tr>
                       </thead>
@@ -98,7 +98,7 @@ const TeamView = () => {
                               <td className="px-6 py-4">
                                  <div className="flex items-center gap-3">
                                     <Avatar name={member.name} src={member.avatar} size="36px" />
-                                    <div className="text-sm font-bold text-gray-700">{member.name}</div>
+                                    <div className="text-sm font-semibold text-gray-700">{member.name}</div>
                                  </div>
                               </td>
                               <td className="px-6 py-4 text-xs font-semibold text-gray-500">{member.role}</td>
@@ -121,19 +121,19 @@ const TeamView = () => {
              {/* PROJECTS: Simple Cards */}
              <div className="col-span-4 space-y-4">
                 <div className="flex items-center justify-between mb-2">
-                   <h2 className="text-[16px] font-bold text-gray-800">Project Pulse</h2>
-                   <button className="text-[11px] font-bold text-blue-500 uppercase tracking-widest">View all</button>
+                   <h2 className="text-[16px] font-semibold text-gray-800">Project Pulse</h2>
+                   <button className="text-[11px] font-semibold text-blue-500 uppercase tracking-widest">View all</button>
                 </div>
 
                 <div className="space-y-3">
                    {teamProjects.map((project, i) => (
                      <div key={i} className="p-5 bg-white border border-gray-100 rounded-[20px] hover:border-blue-100 transition-all cursor-pointer group">
                         <div className="flex justify-between items-start mb-4">
-                           <h4 className="text-sm font-bold text-gray-700 group-hover:text-blue-600 transition-colors">{project.name}</h4>
-                           <Badge variant="success" className="text-[9px] uppercase font-black">{project.status}</Badge>
+                           <h4 className="text-sm font-semibold text-gray-700 group-hover:text-blue-600 transition-colors">{project.name}</h4>
+                           <Badge variant="success" className="text-[9px] uppercase font-semibold">{project.status}</Badge>
                         </div>
                         
-                        <div className="flex items-center justify-between text-[10px] font-bold text-gray-400 uppercase mb-2">
+                        <div className="flex items-center justify-between text-[10px] font-semibold text-gray-400 uppercase mb-2">
                            <span>Progress</span>
                            <span>{project.progress}%</span>
                         </div>
@@ -142,7 +142,7 @@ const TeamView = () => {
                         </div>
 
                         <div className="flex items-center justify-between">
-                           <span className="text-[11px] font-bold text-gray-400">{project.tasks} tasks left</span>
+                           <span className="text-[11px] font-semibold text-gray-400">{project.tasks} tasks left</span>
                            <AvatarGroup users={[{name: 'A'}]} size="20px" />
                         </div>
                      </div>
@@ -150,7 +150,7 @@ const TeamView = () => {
                    
                    <button className="w-full border-2 border-dashed border-gray-50 rounded-[20px] py-6 flex flex-col items-center justify-center gap-2 text-gray-300 hover:text-blue-400 hover:bg-blue-50/50 hover:border-blue-100 transition-all group">
                       <Plus size={24} className="group-hover:scale-110 transition-transform" />
-                      <span className="text-[10px] font-bold uppercase tracking-widest">New Project</span>
+                      <span className="text-[10px] font-semibold uppercase tracking-widest">New Project</span>
                    </button>
                 </div>
              </div>

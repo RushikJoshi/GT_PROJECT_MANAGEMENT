@@ -64,13 +64,13 @@ const MyWork = () => {
         <div className="flex items-center gap-4">
           <button 
             onClick={() => setIsEventModalOpen(true)}
-            className="bg-[#0095FF] text-white px-5 py-2 rounded-full text-xs font-bold hover:bg-blue-600 transition-all flex items-center gap-2 shadow-lg shadow-blue-500/10"
+            className="bg-[#0095FF] text-white px-5 py-2 rounded-full text-xs font-semibold hover:bg-blue-600 transition-all flex items-center gap-2 shadow-lg shadow-blue-500/10"
           >
             <Plus size={16} strokeWidth={3} />
             <span>Add new</span>
           </button>
           
-          <button className="flex items-center gap-2 bg-gray-50 px-4 py-2 rounded-full text-xs font-bold text-gray-700 hover:bg-gray-100 transition-all border border-transparent hover:border-gray-200">
+          <button className="flex items-center gap-2 bg-gray-50 px-4 py-2 rounded-full text-xs font-semibold text-gray-700 hover:bg-gray-100 transition-all border border-transparent hover:border-gray-200">
             <span>Today</span>
             <ChevronDown size={14} className="text-gray-400" />
           </button>
@@ -81,11 +81,11 @@ const MyWork = () => {
              <Search size={18} className="cursor-pointer hover:text-gray-600" />
              <div className="flex items-center gap-1 cursor-pointer hover:text-gray-600">
                 <Group size={18} />
-                <span className="text-xs font-bold">Group</span>
+                <span className="text-xs font-semibold">Group</span>
              </div>
              <div className="flex items-center gap-1 cursor-pointer hover:text-gray-600">
                 <Filter size={18} />
-                <span className="text-xs font-bold">Filter</span>
+                <span className="text-xs font-semibold">Filter</span>
              </div>
           </div>
           
@@ -93,7 +93,7 @@ const MyWork = () => {
              <AvatarGroup users={[{name: 'A'}, {name: 'B'}, {name: 'C'}]} size="28px" />
              <div className="relative">
                 < Bell size={20} className="text-gray-400 cursor-pointer" />
-                <span className="absolute -top-1 -right-1 w-4 h-4 bg-rose-500 text-white text-[9px] font-bold rounded-full flex items-center justify-center border-2 border-white">12</span>
+                <span className="absolute -top-1 -right-1 w-4 h-4 bg-rose-500 text-white text-[9px] font-semibold rounded-full flex items-center justify-center border-2 border-white">12</span>
              </div>
              <Avatar name="User" size="32px" src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100&h=100&fit=crop" />
           </div>
@@ -105,7 +105,7 @@ const MyWork = () => {
           {/* MONTH & DAY SLIDER */}
           <div className="flex items-center px-6 py-3 border-b border-gray-50 bg-gray-50/30">
              <div className="flex items-center gap-2 mr-10">
-                <span className="text-xs font-bold text-gray-400 capitalize">April</span>
+                <span className="text-xs font-semibold text-gray-400 capitalize">April</span>
                 <ChevronLeft size={14} className="text-gray-300 cursor-pointer hover:text-gray-600" />
              </div>
              
@@ -113,10 +113,10 @@ const MyWork = () => {
                {days.map((day, idx) => (
                  <div key={idx} className="min-w-[240px] flex-1 flex flex-col items-center">
                     <div className={`relative px-6 py-2 flex flex-col items-center group cursor-pointer w-full transition-all`}>
-                       <span className={`text-[13px] font-bold ${day.active ? 'text-gray-800' : 'text-gray-400'}`}>{day.date}</span>
+                       <span className={`text-[13px] font-semibold ${day.active ? 'text-gray-800' : 'text-gray-400'}`}>{day.date}</span>
                        {day.active && <div className="absolute bottom-0 left-[40%] right-[40%] h-1 bg-[#2563EB] rounded-full" />}
                     </div>
-                    <div className="text-[10px] font-bold text-gray-300 py-1">{day.totalTime}</div>
+                    <div className="text-[10px] font-semibold text-gray-300 py-1">{day.totalTime}</div>
                  </div>
                ))}
                <div className="min-w-[40px] flex items-center justify-center text-gray-300">

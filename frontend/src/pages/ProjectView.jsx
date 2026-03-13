@@ -40,11 +40,11 @@ const ProjectView = () => {
              <div className="w-8 h-8 bg-emerald-50 text-emerald-600 rounded-lg flex items-center justify-center">
                 <Briefcase size={20} />
              </div>
-             <h1 className="text-[18px] font-bold text-gray-800">{projName}</h1>
+             <h1 className="text-[18px] font-semibold text-gray-800">{projName}</h1>
           </div>
           <button 
             onClick={() => setIsTaskModalOpen(true)}
-            className="bg-[#0095FF] text-white px-5 py-2 rounded-full text-xs font-bold hover:bg-blue-600 transition-all flex items-center gap-2 shadow-lg shadow-blue-500/10"
+            className="bg-[#0095FF] text-white px-5 py-2 rounded-full text-xs font-semibold hover:bg-blue-600 transition-all flex items-center gap-2 shadow-lg shadow-blue-500/10"
           >
             <Plus size={16} strokeWidth={3} />
             <span>Add Task</span>
@@ -70,8 +70,8 @@ const ProjectView = () => {
           <div className="grid grid-cols-4 gap-6">
              {stats.map((stat, i) => (
                <div key={i} className="p-6 rounded-[20px] bg-gray-50/50 border border-gray-100/50">
-                  <div className="text-[11px] font-bold text-gray-400 uppercase tracking-widest mb-1">{stat.label}</div>
-                  <div className={`text-2xl font-black ${stat.color}`}>{stat.value}</div>
+                  <div className="text-[11px] font-semibold text-gray-400 uppercase tracking-widest mb-1">{stat.label}</div>
+                  <div className={`text-2xl ${stat.color}`}>{stat.value}</div>
                </div>
              ))}
           </div>
@@ -80,10 +80,10 @@ const ProjectView = () => {
              {/* TASKS TABLE */}
              <div className="col-span-8 space-y-4">
                 <div className="flex items-center justify-between mb-2">
-                   <h2 className="text-[16px] font-bold text-gray-800">Recent Tasks</h2>
+                   <h2 className="text-[16px] font-semibold text-gray-800">Recent Tasks</h2>
                    <div className="flex items-center bg-gray-50 p-1 rounded-lg">
-                      <button className="p-1 px-2.5 bg-white shadow-sm rounded text-[10px] font-bold text-gray-800">TABLE</button>
-                      <button className="p-1 px-2.5 text-[10px] font-bold text-gray-400 hover:text-gray-600">LIST</button>
+                      <button className="p-1 px-2.5 bg-white shadow-sm rounded text-[10px] font-semibold text-gray-800">TABLE</button>
+                      <button className="p-1 px-2.5 text-[10px] font-semibold text-gray-400 hover:text-gray-600">LIST</button>
                    </div>
                 </div>
                 
@@ -91,21 +91,21 @@ const ProjectView = () => {
                    <table className="w-full text-left">
                       <thead>
                          <tr className="bg-gray-50/50 border-b border-gray-100">
-                            <th className="px-6 py-4 text-[11px] font-bold text-gray-400 uppercase tracking-wider">Task</th>
-                            <th className="px-6 py-4 text-[11px] font-bold text-gray-400 uppercase tracking-wider">Status</th>
-                            <th className="px-6 py-4 text-[11px] font-bold text-gray-400 uppercase tracking-wider">Priority</th>
+                            <th className="px-6 py-4 text-[11px] font-semibold text-gray-400 uppercase tracking-wider">Task</th>
+                            <th className="px-6 py-4 text-[11px] font-semibold text-gray-400 uppercase tracking-wider">Status</th>
+                            <th className="px-6 py-4 text-[11px] font-semibold text-gray-400 uppercase tracking-wider">Priority</th>
                             <th className="px-6 py-4"></th>
                          </tr>
                       </thead>
                       <tbody className="divide-y divide-gray-50">
                          {tasks.map((task, i) => (
                            <tr key={i} className="hover:bg-gray-50/30 transition-colors group">
-                              <td className="px-6 py-4 text-sm font-bold text-gray-700">{task.title}</td>
+                              <td className="px-6 py-4 text-sm font-semibold text-gray-700">{task.title}</td>
                               <td className="px-6 py-4">
                                  <Badge variant={task.status === 'Done' ? 'success' : 'info'}>{task.status}</Badge>
                               </td>
                               <td className="px-6 py-4">
-                                 <span className={`text-[10px] font-black uppercase px-2 py-0.5 rounded ${
+                                 <span className={`text-[10px] font-semibold uppercase px-2 py-0.5 rounded ${
                                    task.priority === 'High' ? 'text-rose-600 bg-rose-50' : 'text-amber-600 bg-amber-50'
                                  }`}>
                                    {task.priority}
@@ -123,7 +123,7 @@ const ProjectView = () => {
 
              {/* ACTIVITY: Minimal Feed */}
              <div className="col-span-4 space-y-4">
-                <h2 className="text-[16px] font-bold text-gray-800">Recent Activity</h2>
+                <h2 className="text-[16px] font-semibold text-gray-800">Recent Activity</h2>
                 <div className="space-y-4">
                    {[
                      { user: 'Sofia', action: 'uploaded files', target: 'Brand Assets', time: '2h ago', icon: Paperclip },
@@ -136,9 +136,9 @@ const ProjectView = () => {
                         </div>
                         <div className="flex-1 min-w-0">
                            <p className="text-[13px] text-gray-600 leading-snug">
-                              <span className="font-bold text-gray-800">{item.user}</span> {item.action} <span className="text-blue-500 font-medium">{item.target}</span>
+                              <span className="font-semibold text-gray-800">{item.user}</span> {item.action} <span className="text-blue-500 font-medium">{item.target}</span>
                            </p>
-                           <span className="text-[10px] font-bold text-gray-300 uppercase block mt-1">{item.time}</span>
+                           <span className="text-[10px] font-semibold text-gray-300 uppercase block mt-1">{item.time}</span>
                         </div>
                      </div>
                    ))}

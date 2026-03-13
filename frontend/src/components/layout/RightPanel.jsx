@@ -21,11 +21,11 @@ const RightPanel = ({ isOpen, onClose, task }) => {
               <button className="text-[#6B7280] hover:text-[#111827]">
                 <CheckCircle2 size={18} />
               </button>
-              <span className="text-xs font-bold text-[#6B7280] uppercase tracking-wider">Task Info</span>
+              <span className="text-xs font-semibold text-[#6B7280] uppercase tracking-wider">Task Info</span>
             </>
           ) : (
             <>
-              <span className="text-xs font-bold text-[#6B7280] uppercase tracking-wider">Waiting List</span>
+              <span className="text-xs font-semibold text-[#6B7280] uppercase tracking-wider">Waiting List</span>
               <Badge variant="blue">12 Tasks</Badge>
             </>
           )}
@@ -56,7 +56,7 @@ const RightPanel = ({ isOpen, onClose, task }) => {
                 <Badge variant="blue">Development</Badge>
                 <Badge variant="orange">High Priority</Badge>
               </div>
-              <h2 className="text-xl font-bold leading-tight mb-2">
+              <h2 className="text-xl font-semibold leading-tight mb-2">
                 {task.title}
               </h2>
               <p className="text-sm text-[#6B7280] leading-relaxed">
@@ -89,7 +89,7 @@ const RightPanel = ({ isOpen, onClose, task }) => {
             </div>
 
             <div className="border-b border-[#E5E7EB] flex gap-6">
-              <button className="pb-3 border-b-2 border-[#2563EB] text-sm font-bold text-[#2563EB]">Comments</button>
+              <button className="pb-3 border-b-2 border-[#2563EB] text-sm font-semibold text-[#2563EB]">Comments</button>
               <button className="pb-3 text-sm font-medium text-[#6B7280] hover:text-[#111827]">Activity</button>
             </div>
 
@@ -120,18 +120,18 @@ const RightPanel = ({ isOpen, onClose, task }) => {
                   className="p-4 bg-white border border-[#E5E7EB] rounded-xl cursor-move hover:border-[#2563EB] hover:shadow-md transition-all group"
                 >
                   <div className="flex justify-between items-start mb-2">
-                     <span className="text-[10px] font-bold text-[#6B7280] uppercase tracking-widest">{waitingTask.project}</span>
+                     <span className="text-[10px] font-semibold text-[#6B7280] uppercase tracking-widest">{waitingTask.project}</span>
                      <Badge variant={waitingTask.priority === 'High' ? 'orange' : 'gray'}>{waitingTask.priority}</Badge>
                   </div>
-                  <h4 className="text-sm font-bold text-[#111827]">{waitingTask.title}</h4>
+                  <h4 className="text-sm font-semibold text-[#111827]">{waitingTask.title}</h4>
                   <div className="mt-3 flex justify-end opacity-0 group-hover:opacity-100 transition-opacity">
-                     <button className="text-[10px] font-bold text-[#2563EB] uppercase">Schedule →</button>
+                     <button className="text-[10px] font-semibold text-[#2563EB] uppercase">Schedule →</button>
                   </div>
                 </div>
               ))}
             </div>
 
-            <button className="w-full border-2 border-dashed border-gray-200 py-3 rounded-xl flex items-center justify-center text-gray-400 hover:bg-gray-50 hover:border-gray-300 transition-all font-bold text-xs">
+            <button className="w-full border-2 border-dashed border-gray-200 py-3 rounded-xl flex items-center justify-center text-gray-400 hover:bg-gray-50 hover:border-gray-300 transition-all font-semibold text-xs">
               <Plus size={16} className="mr-2" /> Quick Add to Waiting List
             </button>
           </div>
@@ -151,7 +151,7 @@ const RightPanel = ({ isOpen, onClose, task }) => {
               <div className="flex items-center gap-2 text-[#6B7280]">
                 <button className="p-1 hover:bg-gray-100 rounded"><Paperclip size={14}/></button>
               </div>
-              <button className="bg-[#2563EB] text-white px-4 py-1.5 rounded-lg text-xs font-bold hover:bg-blue-700 transition-all">
+              <button className="bg-[#2563EB] text-white px-4 py-1.5 rounded-lg text-xs font-semibold hover:bg-blue-700 transition-all">
                 Send
               </button>
             </div>

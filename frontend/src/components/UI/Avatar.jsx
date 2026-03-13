@@ -28,7 +28,7 @@ export const AvatarGroup = ({ users = [], size = '28px', limit = 3 }) => {
       ))}
       {remaining > 0 && (
         <div 
-          className="rounded-full bg-gray-100 text-gray-500 font-bold text-[10px] flex items-center justify-center ring-2 ring-white"
+          className="rounded-full bg-gray-100 text-gray-500 font-semibold text-[10px] flex items-center justify-center ring-2 ring-white"
           style={{ width: size, height: size }}
         >
           +{remaining}
