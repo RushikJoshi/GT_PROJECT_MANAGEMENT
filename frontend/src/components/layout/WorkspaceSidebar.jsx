@@ -17,7 +17,7 @@ const WorkspaceSidebar = () => {
 
   return (
     <aside className="w-[80px] bg-white border-r border-[#E5E7EB] flex flex-col items-center py-6 h-full z-10 shrink-0">
-      <div className="text-[13px] font-bold text-gray-800 mb-8">Tools</div>
+      <div className="text-[13px] font-semibold text-gray-800 mb-8">Tools</div>
 
       <div className="flex-1 flex flex-col items-center gap-6 w-full">
         {tools.map((tool) => {
@@ -37,7 +37,7 @@ const WorkspaceSidebar = () => {
                 strokeWidth={isActive ? 2.5 : 2}
               />
               {tool.hasDate && (
-                <span className={`absolute inset-0 flex items-center justify-center text-[9px] font-bold mt-1.5 ${isActive ? 'text-[#2563EB]' : 'text-[#a0aec0] opacity-0 group-hover:opacity-100'}`}>
+                <span className={`absolute inset-0 flex items-center justify-center text-[9px] font-semibold mt-1.5 ${isActive ? 'text-[#2563EB]' : 'text-[#a0aec0] opacity-0 group-hover:opacity-100'}`}>
                   31
                 </span>
               )}

@@ -12,7 +12,21 @@ export default function Login() {
 
     const navigate = useNavigate();
 
-
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        setLoading(true);
+        setError('');
+        // fake authentication for demo
+        setTimeout(() => {
+            setLoading(false);
+            // determine role from email for illustration
+            if (email.includes('employee')) {
+                navigate('/employee');
+            } else {
+                navigate('/dashboard');
+            }
+        }, 500);
+    };
 
     return (
         <div className="min-h-screen flex bg-white font-sans">
@@ -54,7 +68,7 @@ export default function Login() {
 
                 <div className="w-full max-w-md bg-white rounded-2xl shadow-xl border border-slate-200 p-8">
 
-                    <h2 className="text-2xl font-bold text-slate-900 mb-1">
+                    <h2 className="text-2xl font-semibold text-slate-900 mb-1">
                         Welcome back
                     </h2>
 
@@ -68,7 +82,7 @@ export default function Login() {
                         </div>
                     )}
 
-                    <form className="space-y-5">
+                    <form className="space-y-5" onSubmit={handleSubmit}>
 
                         {/* Email */}
                         <div>

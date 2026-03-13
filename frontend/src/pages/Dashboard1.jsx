@@ -115,7 +115,7 @@ function StatCard({ icon: Icon, label, value, change, positive, color, delay }) 
       </div>
       <div className="flex-1 min-w-0">
         <p className="text-xs text-gray-500 uppercase tracking-wider font-semibold">{label}</p>
-        <h3 className="text-2xl font-bold text-gray-800 mt-0.5">{value}</h3>
+        <h3 className="text-2xl font-semibold text-gray-800 mt-0.5">{value}</h3>
         <p className={`text-xs mt-1 flex items-center gap-1 font-medium ${positive ? "text-emerald-500" : "text-rose-500"}`}>
           {positive ? <ArrowUpRight size={13} /> : <ArrowDownRight size={13} />}
           {change}
@@ -143,7 +143,7 @@ function MiniSidebar({ expanded, setExpanded, activeNav, setActiveNav }) {
         {/* Logo */}
         <div className="h-16 flex items-center justify-center w-full border-b border-white/10">
           <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-blue-400 to-blue-600 flex items-center justify-center">
-            <span className="text-white font-black text-sm">N</span>
+            <span className="text-white font-semibold text-sm">N</span>
           </div>
         </div>
 
@@ -172,7 +172,7 @@ function MiniSidebar({ expanded, setExpanded, activeNav, setActiveNav }) {
             <Settings size={18} />
           </button>
           <div className="w-8 h-8 rounded-full bg-gradient-to-br from-purple-400 to-pink-500 flex items-center justify-center">
-            <span className="text-white text-xs font-bold">JD</span>
+            <span className="text-white text-xs font-semibold">JD</span>
           </div>
         </div>
       </div>
@@ -180,8 +180,8 @@ function MiniSidebar({ expanded, setExpanded, activeNav, setActiveNav }) {
       {/* Expanded panel */}
       <div className={`bg-[#202c44] flex flex-col overflow-hidden transition-all duration-300 ${expanded ? "w-44" : "w-0"}`}>
         <div className="h-16 flex items-center px-4 border-b border-white/10 flex-shrink-0">
-          <span className="text-white font-bold text-lg tracking-tight">Novo</span>
-          <span className="text-blue-400 font-bold text-lg">Admin</span>
+          <span className="text-white font-semibold text-lg tracking-tight">Novo</span>
+          <span className="text-blue-400 font-semibold text-lg">Admin</span>
           <button onClick={() => setExpanded(false)} className="ml-auto text-gray-400 hover:text-white transition-colors">
             <ChevronLeft size={16} />
           </button>
@@ -297,7 +297,7 @@ function TopBar({ sidebarExpanded, setSidebarExpanded }) {
             className="flex items-center gap-2 px-2 py-1.5 rounded-lg hover:bg-gray-100 transition-all"
           >
             <div className="w-8 h-8 rounded-full bg-gradient-to-br from-blue-500 to-purple-600 flex items-center justify-center">
-              <span className="text-white text-xs font-bold">JD</span>
+              <span className="text-white text-xs font-semibold">JD</span>
             </div>
             <div className="hidden sm:block text-left">
               <p className="text-xs font-semibold text-gray-800 leading-none">John Doe</p>
@@ -343,7 +343,7 @@ export default function NovoDashboard() {
     <div className="min-h-screen bg-[#f4f6fb] font-sans">
       <style>{`
         @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800&display=swap');
-        * { font-family: 'Nunito', sans-serif; }
+        * { font-family: 'Inter', sans-serif; }
         @keyframes fadeIn { from { opacity:0; transform:translateY(-8px); } to { opacity:1; transform:translateY(0); } }
         .animate-fade-in { animation: fadeIn 0.18s ease-out; }
         @keyframes slideUp { from { opacity:0; transform:translateY(20px); } to { opacity:1; transform:translateY(0); } }
@@ -364,7 +364,7 @@ export default function NovoDashboard() {
         <div className="p-6">
           {/* Page Header */}
           <div className="mb-6 slide-up">
-            <h1 className="text-xl font-bold text-gray-800">Dashboard</h1>
+            <h1 className="text-xl font-semibold text-gray-800">Dashboard</h1>
             <p className="text-sm text-gray-500 mt-0.5">Welcome back, John! Here's what's happening.</p>
           </div>
 
@@ -381,7 +381,7 @@ export default function NovoDashboard() {
             {/* Revenue Overview */}
             <div className="xl:col-span-2 bg-white rounded-xl shadow-sm border border-gray-100 p-5">
               <div className="flex items-center justify-between mb-4">
-                <h3 className="font-bold text-gray-800 text-sm">Revenue Overview</h3>
+                <h3 className="font-semibold text-gray-800 text-sm">Revenue Overview</h3>
                 <div className="flex gap-1">
                   {["ALL", "1M", "6M", "1Y"].map(t => (
                     <button
@@ -424,7 +424,7 @@ export default function NovoDashboard() {
                 ].map(r => (
                   <div key={r.label} className="text-center">
                     <p className="text-xs text-gray-500">{r.label}</p>
-                    <p className="font-bold text-gray-800 text-sm mt-0.5">{r.val}</p>
+                    <p className="font-semibold text-gray-800 text-sm mt-0.5">{r.val}</p>
                     <p className={`text-xs mt-0.5 font-medium ${r.up ? "text-emerald-500" : "text-rose-500"}`}>{r.change}</p>
                   </div>
                 ))}
@@ -434,7 +434,7 @@ export default function NovoDashboard() {
             {/* User Deals */}
             <div className="bg-white rounded-xl shadow-sm border border-gray-100 p-5">
               <div className="flex items-center justify-between mb-4">
-                <h3 className="font-bold text-gray-800 text-sm">User Deals</h3>
+                <h3 className="font-semibold text-gray-800 text-sm">User Deals</h3>
                 <button className="text-gray-400 hover:text-gray-600 transition-colors"><MoreHorizontal size={16} /></button>
               </div>
               <div className="grid grid-cols-3 gap-3">
@@ -444,12 +444,12 @@ export default function NovoDashboard() {
                     className="flex flex-col items-center p-3 rounded-xl hover:bg-gray-50 cursor-pointer transition-all duration-200 group"
                     style={{ animationDelay: `${i * 60}ms` }}
                   >
-                    <div className={`w-10 h-10 rounded-xl ${u.color} flex items-center justify-center text-white font-bold text-sm shadow-md group-hover:scale-110 transition-transform duration-200`}>
+                    <div className={`w-10 h-10 rounded-xl ${u.color} flex items-center justify-center text-white font-semibold text-sm shadow-md group-hover:scale-110 transition-transform duration-200`}>
                       {u.initials}
                     </div>
                     <p className="text-xs font-semibold text-gray-800 mt-2">{u.name}</p>
                     <p className="text-xs text-gray-400">{u.role}</p>
-                    <p className="text-xs font-bold text-blue-600 mt-1">{u.amount}</p>
+                    <p className="text-xs font-semibold text-blue-600 mt-1">{u.amount}</p>
                   </div>
                 ))}
               </div>
@@ -461,7 +461,7 @@ export default function NovoDashboard() {
             {/* Contacts Table */}
             <div className="xl:col-span-2 bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden">
               <div className="flex items-center justify-between p-4 border-b border-gray-100">
-                <h3 className="font-bold text-gray-800 text-sm">Contacts</h3>
+                <h3 className="font-semibold text-gray-800 text-sm">Contacts</h3>
                 <div className="flex items-center gap-1">
                   {[{ icon: Upload, label: "Import" }, { icon: Download, label: "Export" }, { icon: Printer, label: "Print" }, { icon: Settings, label: "Settings" }].map(({ icon: Icon, label }) => (
                     <button key={label} title={label} className="w-7 h-7 flex items-center justify-center rounded-lg text-gray-400 hover:bg-gray-100 hover:text-gray-600 transition-all">
@@ -484,7 +484,7 @@ export default function NovoDashboard() {
                       <tr key={i} className="border-b border-gray-50 hover:bg-blue-50/40 cursor-pointer transition-colors duration-150">
                         <td className="px-4 py-2.5">
                           <div className="flex items-center gap-2.5">
-                            <div className={`w-7 h-7 rounded-full ${avatarColors[i % avatarColors.length]} flex items-center justify-center text-white text-xs font-bold flex-shrink-0`}>
+                            <div className={`w-7 h-7 rounded-full ${avatarColors[i % avatarColors.length]} flex items-center justify-center text-white text-xs font-semibold flex-shrink-0`}>
                               {c.avatar}
                             </div>
                             <span className="font-semibold text-gray-800">{c.name}</span>
@@ -509,7 +509,7 @@ export default function NovoDashboard() {
             {/* Activity Feed */}
             <div className="bg-white rounded-xl shadow-sm border border-gray-100 p-5">
               <div className="flex items-center justify-between mb-3">
-                <h3 className="font-bold text-gray-800 text-sm">Activity</h3>
+                <h3 className="font-semibold text-gray-800 text-sm">Activity</h3>
                 <button className="text-gray-400 hover:text-gray-600"><MoreHorizontal size={16} /></button>
               </div>
               <div className="flex gap-1 mb-4 p-1 bg-gray-100 rounded-lg">
@@ -553,10 +553,10 @@ export default function NovoDashboard() {
             {/* Mail Widget */}
             <div className="bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden">
               <div className="flex items-center justify-between p-4 border-b border-gray-100">
-                <h3 className="font-bold text-gray-800 text-sm flex items-center gap-2">
+                <h3 className="font-semibold text-gray-800 text-sm flex items-center gap-2">
                   <Mail size={15} className="text-blue-500" />
                   Mail
-                  <span className="bg-blue-100 text-blue-600 text-xs font-bold px-2 py-0.5 rounded-full">7</span>
+                  <span className="bg-blue-100 text-blue-600 text-xs font-semibold px-2 py-0.5 rounded-full">7</span>
                 </h3>
                 <div className="flex items-center gap-1">
                   {[Upload, Download, Printer, Settings].map((Icon, i) => (
@@ -575,12 +575,12 @@ export default function NovoDashboard() {
                   { from: "Marcus Wright", subj: "New feature request", preview: "Duis lacinia neque in nisl facilisis...", time: "3 hr ago", unread: false, color: "bg-rose-500" },
                 ].map((m, i) => (
                   <div key={i} className={`flex items-center gap-3 px-4 py-3 border-b border-gray-50 hover:bg-blue-50/40 cursor-pointer transition-colors ${m.unread ? "bg-blue-50/20" : ""}`}>
-                    <div className={`w-8 h-8 rounded-full ${m.color} flex items-center justify-center text-white text-xs font-bold flex-shrink-0`}>
+                    <div className={`w-8 h-8 rounded-full ${m.color} flex items-center justify-center text-white text-xs font-semibold flex-shrink-0`}>
                       {m.from.charAt(0)}
                     </div>
                     <div className="flex-1 min-w-0">
                       <div className="flex items-center justify-between">
-                        <p className={`text-xs ${m.unread ? "font-bold text-gray-800" : "font-semibold text-gray-700"} truncate`}>{m.from}</p>
+                        <p className={`text-xs ${m.unread ? "font-semibold text-gray-800" : "font-semibold text-gray-700"} truncate`}>{m.from}</p>
                         <span className="text-xs text-gray-400 ml-2 flex-shrink-0">{m.time}</span>
                       </div>
                       <p className="text-xs text-gray-600 truncate">{m.subj}</p>
@@ -595,7 +595,7 @@ export default function NovoDashboard() {
             {/* Tasks List */}
             <div className="bg-white rounded-xl shadow-sm border border-gray-100 p-5">
               <div className="flex items-center justify-between mb-3">
-                <h3 className="font-bold text-gray-800 text-sm flex items-center gap-2">
+                <h3 className="font-semibold text-gray-800 text-sm flex items-center gap-2">
                   <CheckSquare size={15} className="text-emerald-500" />
                   Tasks List
                 </h3>
@@ -619,7 +619,7 @@ export default function NovoDashboard() {
                       {taskDone[i] && <svg width="10" height="8" viewBox="0 0 10 8" fill="none"><path d="M1 4l3 3 5-6" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" /></svg>}
                     </div>
                     <div className="flex-1 min-w-0">
-                      <p className={`text-xs font-bold ${taskDone[i] ? "line-through text-gray-400" : "text-gray-800"}`}>{task.title}</p>
+                      <p className={`text-xs font-semibold ${taskDone[i] ? "line-through text-gray-400" : "text-gray-800"}`}>{task.title}</p>
                       <p className="text-xs text-gray-400 mt-0.5 leading-relaxed line-clamp-2">{task.desc}</p>
                       <p className="text-xs text-gray-400 mt-1 flex items-center gap-1"><Clock size={10} />{task.date}</p>
                     </div>

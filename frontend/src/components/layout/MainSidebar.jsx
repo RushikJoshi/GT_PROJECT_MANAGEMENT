@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { 
   ChevronDown, Search, Plus, 
-  MoreVertical, Hash, Folder, ChevronRight
+  MoreVertical, Hash, Folder, ChevronRight, Users, User
 } from 'lucide-react';
 import { Avatar, AvatarGroup } from '../UI/Avatar';
 import { NavLink } from 'react-router-dom';
@@ -45,10 +45,10 @@ const MainSidebar = () => {
       <div className="px-6 h-16 flex items-center justify-between group cursor-pointer border-b border-white/5">
         <div className="flex items-center gap-3">
           <div className="w-8 h-8 bg-white rounded-full flex items-center justify-center shrink-0">
-            <span className="text-[#141b2d] font-black text-sm">G</span>
+              <img src='/logo.png' />
           </div>
           <div className="flex items-center gap-2 overflow-hidden">
-            <h2 className="text-sm font-semibold tracking-tight truncate">GIM Agency</h2>
+            <h2 className="text-sm font-semibold tracking-tight truncate">Gitakshmi PMS</h2>
             <ChevronDown size={14} className="text-[#a0aec0]" />
           </div>
         </div>
@@ -80,12 +80,28 @@ const MainSidebar = () => {
           </NavLink>
         </div>
 
+        {/* EMPLOYEE DASHBOARD LINK */}
+        <div className="px-3 mb-6">
+          <NavLink to="/employee" className={({isActive}) => `flex items-center gap-3 px-3 py-2 rounded-xl transition-all ${isActive ? 'bg-white/10' : 'hover:bg-white/5'}`}>
+            <User size={20} className="text-[#a0aec0]" />
+            <span className="text-sm font-medium">My Dashboard</span>
+          </NavLink>
+        </div>
+
+        {/* TEAM-LEADER / EMPLOYEE LIST LINK */}
+        <div className="px-3 mb-6">
+          <NavLink to="/employees" className={({isActive}) => `flex items-center gap-3 px-3 py-2 rounded-xl transition-all ${isActive ? 'bg-white/10' : 'hover:bg-white/5'}`}>
+            <Users size={20} className="text-[#a0aec0]" />
+            <span className="text-sm font-medium">Employees</span>
+          </NavLink>
+        </div>
+
         {/* TEAMS SECTION */}
         <div className="mb-6">
           <div className="flex items-center justify-between px-6 mb-2 group cursor-pointer">
             <div className="flex items-center gap-2">
               <ChevronDown size={14} className="text-[#a0aec0]" />
-              <span className="text-[11px] font-bold text-[#a0aec0] uppercase tracking-wider">Teams</span>
+              <span className="text-[11px] font-semibold text-[#a0aec0] uppercase tracking-wider">Teams</span>
             </div>
             <Plus size={16} className="text-[#a0aec0] hover:text-white opacity-0 group-hover:opacity-100 transition-all" />
           </div>
@@ -114,7 +130,7 @@ const MainSidebar = () => {
           <div className="flex items-center justify-between px-6 mb-2 group cursor-pointer" onClick={() => setOpenProjects(!openProjects)}>
             <div className="flex items-center gap-2">
               {openProjects ? <ChevronDown size={14} className="text-[#a0aec0]" /> : <ChevronRight size={14} className="text-[#a0aec0]" />}
-              <span className="text-[11px] font-bold text-[#a0aec0] uppercase tracking-wider">Projects</span>
+              <span className="text-[11px] font-semibold text-[#a0aec0] uppercase tracking-wider">Projects</span>
             </div>
             <Plus 
               size={16} 
@@ -182,7 +198,7 @@ const MainSidebar = () => {
 
       {/* INVITE BOTTOM */}
       <div className="p-4 border-t border-white/5">
-        <button className="w-full py-2.5 px-4 bg-white/5 border border-white/10 rounded-xl text-xs font-bold hover:bg-white/10 transition-all flex items-center justify-center gap-2">
+        <button className="w-full py-2.5 px-4 bg-white/5 border border-white/10 rounded-xl text-xs font-semibold hover:bg-white/10 transition-all flex items-center justify-center gap-2">
            <Plus size={14} /> Invite people
         </button>
       </div>

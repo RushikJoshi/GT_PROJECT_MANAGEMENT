@@ -41,15 +41,15 @@ const TaskCard = ({
       <div className="flex justify-between items-start">
         <div className="flex items-center gap-1.5">
           <div className={`w-2 h-2 rounded-full ${priorityColor}`} />
-          <span className="text-[10px] font-black uppercase text-gray-700 tracking-tighter">{priority}</span>
+          <span className="text-[10px] font-semibold uppercase text-gray-700 tracking-tighter">{priority}</span>
         </div>
         <MoreHorizontal size={14} className="text-gray-500 opacity-0 group-hover:opacity-100 transition-opacity" />
       </div>
 
       {/* BODY: TITLE & PROJECT */}
       <div className="flex-1">
-        <h4 className="text-[13px] font-bold text-gray-800 leading-snug mb-1 line-clamp-2">{title}</h4>
-        <p className="text-[10px] font-bold text-gray-500/70 uppercase tracking-wider">{project}</p>
+        <h4 className="text-[13px] font-semibold text-gray-800 leading-snug mb-1 line-clamp-2">{title}</h4>
+        <p className="text-[10px] font-semibold text-gray-500/70 uppercase tracking-wider">{project}</p>
       </div>
 
       {/* FOOTER: DURATION & LABELS */}
@@ -58,7 +58,7 @@ const TaskCard = ({
           {duration && (
             <div className="flex items-center gap-1 text-gray-600">
               <Clock size={12} />
-              <span className="text-[11px] font-bold">{duration}</span>
+              <span className="text-[11px] font-semibold">{duration}</span>
             </div>
           )}
         </div>
@@ -66,7 +66,7 @@ const TaskCard = ({
         {labels.length > 0 && (
           <div className="flex gap-1">
             {labels.map((label, idx) => (
-              <span key={idx} className="text-[9px] bg-white/40 text-gray-700 px-1.5 py-0.5 rounded font-black uppercase">
+              <span key={idx} className="text-[9px] bg-white/40 text-gray-700 px-1.5 py-0.5 rounded font-semibold uppercase">
                 {label}
               </span>
             ))}

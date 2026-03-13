@@ -46,7 +46,7 @@ const Tasks = () => {
         <div className="flex items-center gap-4">
           <button 
             onClick={() => setIsTaskModalOpen(true)}
-            className="bg-[#0095FF] text-white px-5 py-2 rounded-full text-xs font-bold hover:bg-blue-600 transition-all flex items-center gap-2"
+            className="bg-[#0095FF] text-white px-5 py-2 rounded-full text-xs font-semibold hover:bg-blue-600 transition-all flex items-center gap-2"
           >
             <Plus size={16} strokeWidth={3} />
             <span>Add now</span>
@@ -55,14 +55,14 @@ const Tasks = () => {
           <div className="flex items-center bg-gray-50 p-1 rounded-full border border-gray-100">
              <button 
                onClick={() => setView('table')}
-               className={`flex items-center gap-1.5 px-4 py-1.5 rounded-full text-xs font-bold transition-all ${view === 'table' ? 'bg-white shadow-sm text-gray-800' : 'text-gray-400'}`}
+               className={`flex items-center gap-1.5 px-4 py-1.5 rounded-full text-xs font-semibold transition-all ${view === 'table' ? 'bg-white shadow-sm text-gray-800' : 'text-gray-400'}`}
              >
                 <TableIcon size={14} />
                 <span>Table view</span>
              </button>
              <button 
                onClick={() => setView('kanban')}
-               className={`flex items-center gap-1.5 px-4 py-1.5 rounded-full text-xs font-bold transition-all ${view === 'kanban' ? 'bg-white shadow-sm text-gray-800' : 'text-gray-400'}`}
+               className={`flex items-center gap-1.5 px-4 py-1.5 rounded-full text-xs font-semibold transition-all ${view === 'kanban' ? 'bg-white shadow-sm text-gray-800' : 'text-gray-400'}`}
              >
                 <LayoutGrid size={14} />
                 <span>Kanban board</span>
@@ -75,11 +75,11 @@ const Tasks = () => {
              <Search size={18} className="cursor-pointer hover:text-gray-600" />
              <div className="flex items-center gap-1 cursor-pointer hover:text-gray-600">
                 <Group size={18} />
-                <span className="text-xs font-bold">Group</span>
+                <span className="text-xs font-semibold">Group</span>
              </div>
              <div className="flex items-center gap-1 cursor-pointer hover:text-gray-600">
                 <Filter size={18} />
-                <span className="text-xs font-bold">Filter</span>
+                <span className="text-xs font-semibold">Filter</span>
              </div>
           </div>
           
@@ -87,7 +87,7 @@ const Tasks = () => {
              <AvatarGroup users={[{name: 'A'}, {name: 'B'}, {name: 'C'}, {name: 'D'}]} size="28px" />
              <div className="relative">
                 <Bell size={20} className="text-gray-400 cursor-pointer" />
-                <span className="absolute -top-1 -right-1 w-4 h-4 bg-rose-500 text-white text-[9px] font-bold rounded-full flex items-center justify-center border-2 border-white">12</span>
+                <span className="absolute -top-1 -right-1 w-4 h-4 bg-rose-500 text-white text-[9px] font-semibold rounded-full flex items-center justify-center border-2 border-white">12</span>
              </div>
              <Avatar name="User" size="32px" src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100&h=100&fit=crop" />
           </div>
@@ -102,15 +102,15 @@ const Tasks = () => {
               <th className="px-6 py-4">
                 <div className="flex items-center gap-3">
                    <ChevronDown size={14} className="text-gray-400" />
-                   <span className="text-[11px] font-bold text-gray-800 uppercase tracking-wider">Active tasks</span>
-                   <span className="text-[10px] bg-gray-100 text-gray-400 px-1.5 py-0.5 rounded-full font-bold">20</span>
+                   <span className="text-[11px] font-semibold text-gray-800 uppercase tracking-wider">Active tasks</span>
+                   <span className="text-[10px] bg-gray-100 text-gray-400 px-1.5 py-0.5 rounded-full font-semibold">20</span>
                 </div>
               </th>
-              <th className="px-4 py-4 text-[11px] font-bold text-gray-400 uppercase tracking-wider">Status</th>
-              <th className="px-4 py-4 text-[11px] font-bold text-gray-400 uppercase tracking-wider">Type</th>
-              <th className="px-4 py-4 text-[11px] font-bold text-gray-400 uppercase tracking-wider">Due date</th>
-              <th className="px-4 py-4 text-[11px] font-bold text-gray-400 uppercase tracking-wider">Est. time</th>
-              <th className="px-4 py-4 text-[11px] font-bold text-gray-400 uppercase tracking-wider text-right">Responsible</th>
+              <th className="px-4 py-4 text-[11px] font-semibold text-gray-400 uppercase tracking-wider">Status</th>
+              <th className="px-4 py-4 text-[11px] font-semibold text-gray-400 uppercase tracking-wider">Type</th>
+              <th className="px-4 py-4 text-[11px] font-semibold text-gray-400 uppercase tracking-wider">Due date</th>
+              <th className="px-4 py-4 text-[11px] font-semibold text-gray-400 uppercase tracking-wider">Est. time</th>
+              <th className="px-4 py-4 text-[11px] font-semibold text-gray-400 uppercase tracking-wider text-right">Responsible</th>
               <th className="px-4 py-4 text-right"><Settings size={14} className="text-gray-300 ml-auto" /></th>
             </tr>
           </thead>
@@ -126,7 +126,7 @@ const Tasks = () => {
                      <div className="w-4 h-4 border-2 border-gray-200 rounded flex-shrink-0" />
                      <span className="text-[13px] font-medium text-gray-600">{task.title}</span>
                      {task.labels && task.labels.map(l => (
-                       <span key={l} className="text-[10px] bg-blue-50 text-blue-500 px-1.5 py-0.5 rounded font-bold uppercase tracking-tight">{l}</span>
+                       <span key={l} className="text-[10px] bg-blue-50 text-blue-500 px-1.5 py-0.5 rounded font-semibold uppercase tracking-tight">{l}</span>
                      ))}
                   </div>
                 </td>
@@ -141,7 +141,7 @@ const Tasks = () => {
                 <td className="px-4 py-3">
                    <div className="flex items-center gap-2">
                       <div className="w-2.5 h-2.5 rounded-full border-2 border-gray-200" />
-                      <span className={`text-[11px] font-bold px-3 py-1 rounded-lg ${getTypeStyle(task.type)}`}>
+                      <span className={`text-[11px] font-semibold px-3 py-1 rounded-lg ${getTypeStyle(task.type)}`}>
                         {task.type}
                       </span>
                    </div>

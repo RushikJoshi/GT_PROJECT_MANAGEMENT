@@ -30,7 +30,7 @@ const Dashboard = () => {
       {/* HEADER */}
       <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
         <div>
-          <h1 className="text-2xl font-bold tracking-tight">Morning, John 👋</h1>
+          <h1 className="text-2xl font-semibold tracking-tight">Morning, John 👋</h1>
           <p className="text-sm text-[#6B7280] font-medium mt-1">Here is what is happening in your workspace today.</p>
         </div>
         <div className="flex items-center gap-3">
@@ -38,7 +38,7 @@ const Dashboard = () => {
             <CalendarIcon size={16} className="text-[#6B7280]" />
             <span className="text-sm font-semibold">Oct 24, 2024</span>
           </div>
-          <button className="bg-[#2563EB] text-white px-5 py-2 rounded-lg text-sm font-bold shadow-lg shadow-blue-500/20 hover:bg-blue-700 transition-all flex items-center gap-2">
+          <button className="bg-[#2563EB] text-white px-5 py-2 rounded-lg text-sm font-semibold shadow-lg shadow-blue-500/20 hover:bg-blue-700 transition-all flex items-center gap-2">
             <Plus size={18} />
             <span>Quick Task</span>
           </button>
@@ -51,15 +51,15 @@ const Dashboard = () => {
           <Card key={i} padding="p-6">
             <div className="flex items-start justify-between">
               <div>
-                <p className="text-xs font-bold text-[#6B7280] uppercase tracking-wider mb-1">{stat.label}</p>
-                <h3 className="text-2xl font-bold">{stat.value}</h3>
+                <p className="text-xs font-semibold text-[#6B7280] uppercase tracking-wider mb-1">{stat.label}</p>
+                <h3 className="text-2xl font-semibold">{stat.value}</h3>
               </div>
               <div className={`p-3 rounded-xl ${stat.bg} ${stat.color}`}>
                 <stat.icon size={20} />
               </div>
             </div>
             <div className="mt-4 flex items-center gap-1.5">
-              <span className={`text-xs font-bold ${stat.change.startsWith('+') ? 'text-emerald-600' : 'text-rose-600'}`}>
+              <span className={`text-xs font-semibold ${stat.change.startsWith('+') ? 'text-emerald-600' : 'text-rose-600'}`}>
                 {stat.change}
               </span>
               <span className="text-xs text-[#6B7280] font-medium">since yesterday</span>
@@ -73,8 +73,8 @@ const Dashboard = () => {
         <div className="xl:col-span-2 space-y-6">
           <Card padding="p-0 overflow-hidden">
             <div className="px-6 py-5 border-b border-[#E5E7EB] flex items-center justify-between">
-              <h3 className="font-bold text-sm">Recent Tasks</h3>
-              <button className="text-[11px] font-bold text-[#2563EB] uppercase tracking-wider hover:underline">View All</button>
+              <h3 className="font-semibold text-sm">Recent Tasks</h3>
+              <button className="text-[11px] font-semibold text-[#2563EB] uppercase tracking-wider hover:underline">View All</button>
             </div>
             <div className="divide-y divide-[#E5E7EB]">
               {recentTasks.map((task) => (
@@ -88,9 +88,9 @@ const Dashboard = () => {
                       <Play size={14} fill="currentColor" />
                     </div>
                     <div>
-                      <h4 className="text-sm font-bold group-hover:text-[#2563EB] transition-colors">{task.title}</h4>
+                      <h4 className="text-sm font-semibold group-hover:text-[#2563EB] transition-colors">{task.title}</h4>
                       <div className="flex items-center gap-3 mt-1">
-                        <span className="text-[10px] font-bold text-[#6B7280] uppercase tracking-widest">{task.project}</span>
+                        <span className="text-[10px] font-semibold text-[#6B7280] uppercase tracking-widest">{task.project}</span>
                         <div className="w-1 h-1 rounded-full bg-gray-300" />
                         <span className="text-[10px] text-[#6B7280] font-medium">{task.status}</span>
                       </div>
@@ -110,7 +110,7 @@ const Dashboard = () => {
           {/* PROJECT PROGRESS CHART PREVIEW */}
           <Card padding="p-6">
             <div className="flex items-center justify-between mb-8">
-              <h3 className="font-bold text-sm">Team Workload</h3>
+              <h3 className="font-semibold text-sm">Team Workload</h3>
               <div className="flex gap-2">
                  <Badge variant="blue">Week</Badge>
                  <Badge variant="gray">Month</Badge>
@@ -125,7 +125,7 @@ const Dashboard = () => {
                       style={{ height: `${h}%` }}
                     />
                   </div>
-                  <p className="text-[9px] font-bold text-[#6B7280] text-center uppercase tracking-tighter">Day {i+1}</p>
+                  <p className="text-[9px] font-semibold text-[#6B7280] text-center uppercase tracking-tighter">Day {i+1}</p>
                 </div>
               ))}
             </div>
@@ -135,11 +135,11 @@ const Dashboard = () => {
         {/* RIGHT: UPCOMING & QUICK ACTIONS */}
         <div className="space-y-6">
           <Card padding="p-6" className="bg-[#2563EB] border-none shadow-xl shadow-blue-500/20 text-white">
-            <h3 className="font-bold text-sm mb-2">Workspace Tip</h3>
+            <h3 className="font-semibold text-sm mb-2">Workspace Tip</h3>
             <p className="text-xs text-blue-100 leading-relaxed mb-6">
               You can drag tasks from the waiting list directly onto the calendar to schedule them in seconds.
             </p>
-            <button className="w-full bg-white text-[#2563EB] py-2.5 rounded-lg text-xs font-bold hover:bg-blue-50 transition-all">
+            <button className="w-full bg-white text-[#2563EB] py-2.5 rounded-lg text-xs font-semibold hover:bg-blue-50 transition-all">
               Try it now
             </button>
           </Card>
@@ -148,15 +148,15 @@ const Dashboard = () => {
              <div className="w-12 h-12 bg-orange-50 text-orange-600 rounded-full flex items-center justify-center mx-auto mb-4">
                 <AlertCircle size={24} />
              </div>
-             <h4 className="font-bold text-sm mb-1">3 Overdue Tasks</h4>
+             <h4 className="font-semibold text-sm mb-1">3 Overdue Tasks</h4>
              <p className="text-xs text-[#6B7280] mb-6">These tasks passed their deadlines.</p>
-             <button className="text-[#2563EB] text-xs font-bold flex items-center gap-1 mx-auto hover:underline">
+             <button className="text-[#2563EB] text-xs font-semibold flex items-center gap-1 mx-auto hover:underline">
                 View Overdue <ChevronRight size={14} />
              </button>
           </Card>
 
           <Card padding="p-6">
-            <h3 className="font-bold text-sm mb-6">Upcoming Deadlines</h3>
+            <h3 className="font-semibold text-sm mb-6">Upcoming Deadlines</h3>
             <div className="space-y-5">
               {[
                 { label: 'API Integration', date: 'Tomorrow', color: 'bg-rose-500' },
@@ -166,7 +166,7 @@ const Dashboard = () => {
                 <div key={i} className="flex items-center gap-4 group cursor-pointer">
                   <div className={`w-1.5 h-10 rounded-full ${item.color} shrink-0`} />
                   <div className="flex-1">
-                    <p className="text-xs font-bold text-[#111827] group-hover:text-[#2563EB] transition-colors">{item.label}</p>
+                    <p className="text-xs font-semibold text-[#111827] group-hover:text-[#2563EB] transition-colors">{item.label}</p>
                     <p className="text-[10px] text-[#6B7280] font-medium mt-0.5">{item.date}</p>
                   </div>
                   <ChevronRight size={14} className="text-gray-300" />

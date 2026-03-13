@@ -27,7 +27,7 @@ const CreateProjectModal = ({ isOpen, onClose }) => {
         {/* HEADER */}
         <div className="p-8 border-b border-gray-50 flex items-center justify-between">
           <div>
-            <h2 className="text-2xl font-black text-gray-800 tracking-tight">Create new project</h2>
+            <h2 className="text-2xl font-semibold text-gray-800 tracking-tight">Create new project</h2>
             <p className="text-sm text-gray-400 font-medium mt-1">Set up a new workspace with custom colors.</p>
           </div>
           <button 
@@ -42,23 +42,23 @@ const CreateProjectModal = ({ isOpen, onClose }) => {
         <div className="p-8 space-y-8 overflow-y-auto">
           {/* PROJECT NAME */}
           <div className="space-y-3">
-             <label className="text-[11px] font-bold text-gray-400 uppercase tracking-widest pl-1">Project Name</label>
+             <label className="text-[11px] font-semibold text-gray-400 uppercase tracking-widest pl-1">Project Name</label>
              <input 
                 type="text" 
                 placeholder="e.g. Website Development"
-                className="w-full bg-gray-50/50 border border-gray-100 rounded-2xl px-6 py-4 text-lg font-bold text-gray-800 placeholder:text-gray-300 focus:ring-4 focus:ring-blue-500/5 focus:border-blue-500 transition-all outline-none"
+                className="w-full bg-gray-50/50 border border-gray-100 rounded-2xl px-6 py-4 text-lg font-semibold text-gray-800 placeholder:text-gray-300 focus:ring-4 focus:ring-blue-500/5 focus:border-blue-500 transition-all outline-none"
              />
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
              {/* TEAM ASSIGNMENT */}
              <div className="space-y-3">
-                <label className="text-[11px] font-bold text-gray-400 uppercase tracking-widest pl-1">Assign to Team</label>
+                <label className="text-[11px] font-semibold text-gray-400 uppercase tracking-widest pl-1">Assign to Team</label>
                 <div className="relative group">
                    <div className="w-full bg-white border border-gray-200 rounded-2xl px-5 py-3.5 flex items-center justify-between cursor-pointer hover:border-blue-400 transition-all">
                       <div className="flex items-center gap-3">
-                         <div className="w-8 h-8 bg-blue-50 text-blue-500 rounded-lg flex items-center justify-center font-bold text-sm">📢</div>
-                         <span className="text-sm font-bold text-gray-700">Marketing</span>
+                         <div className="w-8 h-8 bg-blue-50 text-blue-500 rounded-lg flex items-center justify-center font-semibold text-sm">📢</div>
+                         <span className="text-sm font-semibold text-gray-700">Marketing</span>
                       </div>
                       <ChevronDown size={18} className="text-gray-400" />
                    </div>
@@ -67,13 +67,13 @@ const CreateProjectModal = ({ isOpen, onClose }) => {
 
              {/* PRIVACY SETTINGS */}
              <div className="space-y-3">
-                <label className="text-[11px] font-bold text-gray-400 uppercase tracking-widest pl-1">Privacy</label>
+                <label className="text-[11px] font-semibold text-gray-400 uppercase tracking-widest pl-1">Privacy</label>
                 <div className="flex p-1 bg-gray-50 rounded-2xl border border-gray-100">
-                   <button className="flex-1 flex items-center justify-center gap-2 py-2.5 rounded-xl bg-white shadow-sm text-xs font-bold text-gray-800">
+                   <button className="flex-1 flex items-center justify-center gap-2 py-2.5 rounded-xl bg-white shadow-sm text-xs font-semibold text-gray-800">
                       <Lock size={14} />
                       <span>Private</span>
                    </button>
-                   <button className="flex-1 flex items-center justify-center gap-2 py-2.5 rounded-xl text-xs font-bold text-gray-400 hover:text-gray-600">
+                   <button className="flex-1 flex items-center justify-center gap-2 py-2.5 rounded-xl text-xs font-semibold text-gray-400 hover:text-gray-600">
                       <Users size={14} />
                       <span>Team</span>
                    </button>
@@ -83,7 +83,7 @@ const CreateProjectModal = ({ isOpen, onClose }) => {
 
           {/* PROJECT COLOR SELECTION */}
           <div className="space-y-4">
-             <label className="text-[11px] font-bold text-gray-400 uppercase tracking-widest pl-1">Project Color & Theme</label>
+             <label className="text-[11px] font-semibold text-gray-400 uppercase tracking-widest pl-1">Project Color & Theme</label>
              <div className="flex items-center gap-8 flex-wrap">
                 <div className="flex items-center gap-3 bg-gray-50 p-2 rounded-2xl border border-gray-100">
                    {projectColors.map((color) => (
@@ -111,7 +111,7 @@ const CreateProjectModal = ({ isOpen, onClose }) => {
                          <Briefcase size={24} className="text-gray-700/50" />
                       </div>
                       <div>
-                         <p className="text-xs font-bold text-gray-800">Preview Layout</p>
+                         <p className="text-xs font-semibold text-gray-800">Preview Layout</p>
                          <p className="text-[10px] text-gray-400 font-medium">This color will be applied to all project tasks.</p>
                       </div>
                    </div>
@@ -122,8 +122,8 @@ const CreateProjectModal = ({ isOpen, onClose }) => {
           {/* INVITE MEMBERS */}
           <div className="space-y-4 pt-4">
              <div className="flex items-center justify-between px-1">
-                <label className="text-[11px] font-bold text-gray-400 uppercase tracking-widest">Initial Members</label>
-                <button className="text-[10px] font-black text-blue-500 uppercase tracking-widest hover:underline">Invite all team</button>
+                <label className="text-[11px] font-semibold text-gray-400 uppercase tracking-widest">Initial Members</label>
+                <button className="text-[10px] font-semibold text-blue-500 uppercase tracking-widest hover:underline">Invite all team</button>
              </div>
              <div className="bg-gray-50/50 border border-gray-100 rounded-3xl p-6 flex items-center gap-6">
                 <AvatarGroup users={[{name: 'A'}, {name: 'B'}, {name: 'C'}]} size="44px" />
@@ -139,13 +139,13 @@ const CreateProjectModal = ({ isOpen, onClose }) => {
         <div className="p-8 bg-gray-50/50 border-t border-gray-100 flex justify-end gap-6">
            <button 
              onClick={onClose}
-             className="text-sm font-bold text-gray-400 hover:text-gray-600 transition-all"
+             className="text-sm font-semibold text-gray-400 hover:text-gray-600 transition-all"
            >
              Go back
            </button>
            <button 
              onClick={onClose}
-             className="bg-[#2563EB] text-white px-10 py-3.5 rounded-2xl text-sm font-black shadow-xl shadow-blue-500/20 hover:bg-blue-600 hover:translate-y-[-2px] transition-all"
+             className="bg-[#2563EB] text-white px-10 py-3.5 rounded-2xl text-sm font-semibold shadow-xl shadow-blue-500/20 hover:bg-blue-600 hover:translate-y-[-2px] transition-all"
            >
              Create Project
            </button>

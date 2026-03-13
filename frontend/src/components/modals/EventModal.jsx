@@ -23,10 +23,10 @@ const EventModal = ({ isOpen, onClose }) => {
         {/* LEFT SECTION: MAIN FIELDS */}
         <div className="flex-1 p-8 md:p-10 space-y-8 overflow-y-auto">
           <div className="flex items-center justify-between">
-            <h2 className="text-2xl font-bold text-gray-800">Create event</h2>
+            <h2 className="text-2xl font-semibold text-gray-800">Create event</h2>
             <button className="flex items-center gap-2 text-gray-400 hover:text-gray-600 transition-colors">
               <RefreshCcw size={16} />
-              <span className="text-xs font-bold">Repeat event</span>
+              <span className="text-xs font-semibold">Repeat event</span>
             </button>
           </div>
 
@@ -38,7 +38,7 @@ const EventModal = ({ isOpen, onClose }) => {
              </div>
              <div className="flex items-center gap-2 grow">
                 <div className="bg-white border border-gray-200 rounded-xl px-4 py-2.5 text-sm font-semibold text-gray-700 grow text-center">13:00</div>
-                <span className="text-gray-400 font-bold">—</span>
+                <span className="text-gray-400 font-semibold">—</span>
                 <div className="bg-white border border-gray-200 rounded-xl px-4 py-2.5 text-sm font-semibold text-gray-700 grow text-center">13:30</div>
              </div>
           </div>
@@ -75,11 +75,11 @@ const EventModal = ({ isOpen, onClose }) => {
 
           {/* BOTTOM ACTIONS */}
           <div className="flex items-center gap-3 pt-2">
-             <button className="flex items-center gap-2 px-4 py-2.5 bg-gray-50 text-gray-400 hover:text-gray-600 rounded-xl text-xs font-bold transition-all">
+             <button className="flex items-center gap-2 px-4 py-2.5 bg-gray-50 text-gray-400 hover:text-gray-600 rounded-xl text-xs font-semibold transition-all">
                 <Paperclip size={16} />
                 <span>Attach file</span>
              </button>
-             <button className="flex items-center gap-2 px-4 py-2.5 bg-gray-50 text-gray-400 hover:text-gray-600 rounded-xl text-xs font-bold transition-all">
+             <button className="flex items-center gap-2 px-4 py-2.5 bg-gray-50 text-gray-400 hover:text-gray-600 rounded-xl text-xs font-semibold transition-all">
                 <Bell size={16} />
                 <span>Set reminder</span>
              </button>
@@ -89,12 +89,12 @@ const EventModal = ({ isOpen, onClose }) => {
         {/* RIGHT SECTION: SIDEBAR */}
         <div className="w-full md:w-[320px] bg-gray-50/50 border-l border-gray-100 p-8 space-y-10">
           <div>
-            <h4 className="text-[10px] font-bold text-gray-300 uppercase tracking-widest mb-3">Create in</h4>
-            <div className="text-sm font-bold text-gray-700 cursor-pointer hover:text-blue-600 transition-colors">Marketing campaign</div>
+            <h4 className="text-[10px] font-semibold text-gray-300 uppercase tracking-widest mb-3">Create in</h4>
+            <div className="text-sm font-semibold text-gray-700 cursor-pointer hover:text-blue-600 transition-colors">Marketing campaign</div>
           </div>
 
           <div>
-            <h4 className="text-[10px] font-bold text-gray-300 uppercase tracking-widest mb-3">Type</h4>
+            <h4 className="text-[10px] font-semibold text-gray-300 uppercase tracking-widest mb-3">Type</h4>
             <div className="flex items-center gap-3 bg-white border border-gray-100 px-4 py-2.5 rounded-xl shadow-sm cursor-pointer hover:shadow-md transition-all">
                <div className="w-5 h-5 bg-orange-100 rounded-md border border-orange-200" />
                <span className="text-sm font-semibold text-gray-700">Meeting & Interview</span>
@@ -102,7 +102,7 @@ const EventModal = ({ isOpen, onClose }) => {
           </div>
 
           <div>
-            <h4 className="text-[10px] font-bold text-gray-300 uppercase tracking-widest mb-4">Participants</h4>
+            <h4 className="text-[10px] font-semibold text-gray-300 uppercase tracking-widest mb-4">Participants</h4>
             <div className="space-y-4">
                {participants.map((person, i) => (
                  <div key={i} className="flex items-center justify-between group">
@@ -115,7 +115,7 @@ const EventModal = ({ isOpen, onClose }) => {
                     </div>
                  </div>
                ))}
-               <button className="flex items-center gap-2 text-xs font-bold text-gray-400 hover:text-blue-600 transition-all pt-2 group">
+               <button className="flex items-center gap-2 text-xs font-semibold text-gray-400 hover:text-blue-600 transition-all pt-2 group">
                   <Plus size={16} className="text-gray-300 group-hover:text-blue-500" />
                   <span>Add participants</span>
                </button>
@@ -127,13 +127,13 @@ const EventModal = ({ isOpen, onClose }) => {
         <div className="absolute bottom-0 left-0 right-0 p-6 flex justify-end gap-6 bg-white/80 backdrop-blur-md border-t border-gray-50">
            <button 
              onClick={onClose}
-             className="text-sm font-bold text-gray-400 hover:text-gray-600 transition-all"
+             className="text-sm font-semibold text-gray-400 hover:text-gray-600 transition-all"
            >
              Cancel
            </button>
            <button 
              onClick={onClose}
-             className="bg-[#0095FF] text-white px-10 py-3 rounded-xl text-sm font-black shadow-lg shadow-blue-500/20 hover:bg-blue-600 transition-all"
+             className="bg-[#0095FF] text-white px-10 py-3 rounded-xl text-sm font-semibold shadow-lg shadow-blue-500/20 hover:bg-blue-600 transition-all"
            >
              Create event
            </button>
