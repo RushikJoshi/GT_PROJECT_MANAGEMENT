@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { useAuth } from '../../contexts/AuthContext';
 import Button from '../../components/UI/Button';
 import Input from '../../components/UI/Input';
 
@@ -10,22 +11,33 @@ export default function Login() {
     const [error, setError] = useState('');
     const [loading, setLoading] = useState(false);
 
+    const { login, user } = useAuth();
     const navigate = useNavigate();
 
-    const handleSubmit = (e) => {
-        e.preventDefault();
-        setLoading(true);
-        setError('');
-        // fake authentication for demo
-        setTimeout(() => {
-            setLoading(false);
-            // determine role from email for illustration
-            if (email.includes('employee')) {
+    useEffect(() => {
+        if (user) {
+            // Redirect based on role
+            if (user.role === 'employee') {
                 navigate('/employee');
             } else {
                 navigate('/dashboard');
             }
-        }, 500);
+        }
+    }, [user, navigate]);
+
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+        setLoading(true);
+        setError('');
+
+        const result = await login(email, password);
+        
+        setLoading(false);
+        
+        if (!result.success) {
+            setError(result.message);
+        }
+        // Navigation will happen in useEffect when user is set
     };
 
     return (
